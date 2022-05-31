@@ -1,8 +1,11 @@
+const pallete = required('./pallete')
+const colors = required('./tailwind/colors')
 module.exports = {
   content: [],
   presets: [],
   darkMode: 'media', // or 'class'
   theme: {
+    extend:{colors:pallete},
     screens: {
       sm: '640px',
       md: '768px',
@@ -348,6 +351,10 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
+      regular:['RobotoRegular'],
+      medium:['RobotoMedium'],
+      bold:['RobotoBold'],
+      black:['RobotoBlack'],
       sans: [
         'ui-sans-serif',
         'system-ui',
